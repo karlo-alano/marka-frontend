@@ -54,7 +54,10 @@ function removeCategory(index: number) {
 }
 
 function addAssessment(catIndex: number) {
-  categories[catIndex].assessments.push({
+  const category = categories[catIndex]
+  if (!category) return
+
+  category.assessments.push({
     name: `Assessment ${categories[catIndex].assessments.length + 1}`,
     earned_points: 0,
     total_points: 0,
@@ -62,7 +65,10 @@ function addAssessment(catIndex: number) {
 }
 
 function removeAssessment(catIndex: number, assIndex: number) {
-  categories[catIndex].assessments.splice(assIndex, 1)
+  const category = categories[catIndex]
+
+  if (!category) return
+  category.assessments.splice(assIndex, 1)
 }
 
 const totalWeight = () => categories.reduce((sum, c) => sum + (Number(c.weight) || 0), 0)
