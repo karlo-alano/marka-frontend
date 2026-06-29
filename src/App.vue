@@ -58,7 +58,7 @@ function addAssessment(catIndex: number) {
   if (!category) return
 
   category.assessments.push({
-    name: `Assessment ${categories[catIndex].assessments.length + 1}`,
+    name: `Assessment ${category.assessments.length + 1}`,
     earned_points: 0,
     total_points: 0,
   })
