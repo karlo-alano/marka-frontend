@@ -15,7 +15,8 @@
     "lint": "run-s lint:oxlint lint:eslint",
     "lint:oxlint": "oxlint .",
     "lint:eslint": "eslint . --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write .",
+    "format:check": "prettier --check"
   },
   "dependencies": {
     "@primeicons/angular": "^8.0.0-alpha.1",

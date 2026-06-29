@@ -44,10 +44,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install modules
-      - run: yarn
+        run: npm ci
 
-      - name: Run ESLint
-      - run: eslint . --ext .js,
+      - name: Run linter program
+        run: npm run lint
+
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Run formatting program
+        run: npm run format:check
+
+  vitest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Run formatting program
+        run: npm run test
