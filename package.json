@@ -16,6 +16,14 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "@primeicons/angular": "^8.0.0-alpha.1",
+    "@primeicons/vue": "^8.0.0-alpha.1",
+    "@primeuix/themes": "^3.0.0-rc.1",
+    "@primevue/icons": "^4.5.5",
+    "@tailwindcss/vite": "^4.3.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^5.0.0-rc.1",
+    "tailwindcss": "^4.3.1",
     "vue": "^3.5.38"
   },
   "devDependencies": {
